@@ -1,12 +1,4 @@
-const button = document.getElementById("myButton");
 
-button.addEventListener("click", showMessage);
-
-function showMessage(){
-
-    alert("Welcome to my portfolio website!");
-
-}
 
 function trackInternet() {
 
@@ -18,3 +10,4 @@ function trackInternet() {
     alert("Total Internet Subscription Cost: ₱" + total);
 
 }
+
