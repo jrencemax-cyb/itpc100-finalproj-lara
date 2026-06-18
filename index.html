@@ -1,118 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>John Lara | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div id="flashOverlay"></div>
 
-    <header>
-        <nav>
-            <h1 class="logo">John Lara</h1>
+  <header>
+    <nav>
+      <h1 class="logo">John Lara</h1>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button id="themeToggle" aria-label="Toggle theme">🌙</button>
+    </nav>
+  </header>
 
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <h2>Hi, I'm John Laurence</h2>
+      <p>BSIT Student & Aspiring Developer</p>
+    </div>
+    <div class="hero-image">
+      <img src="images/john.jpg" alt="Profile Picture">
+    </div>
+  </section>
 
-    <section id="home" class="hero">
-
-        <div class="hero-text">
-            <h2>Hello, I am John Laurence</h2>
-            <p>BSIT Student</p>
-
-            
-        </div>
-
-        <div class="hero-image">
-            <img src="images/john.jpg" alt="Profile Picture">
-        </div>
-
-    </section>
-
-    <section id="about" class="about">
-
-    <h2 class="about-title">About Me</h2>
-
+  <section id="about" class="about">
+    <h2 class="section-title">About Me</h2>
     <div class="about-content">
-
-        <div class="about-image">
-            <img src="images/jl.jpg" alt="My Picture">
-        </div>
-
-        <div class="about-text">
-
-            <p>
-                I am John Laurence Lara, I lived in Sta. Irene Prosperidad Agusan del Sur
-                I am a person who is always eager to learn and improve myself in different aspects of life.
-                I value discipline and consistency.
-                I enjoy spending my time learning new things, exploring my interests, and challenging myself to grow as a student and as a person.
-                I also believe in staying focused on my goals and working step by step to achieve them.
-            </p>
-
-        </div>
-
+      <div class="about-image">
+        <img src="images/jl.jpg" alt="My Picture">
+      </div>
+      <div class="about-text">
+        <p>I am John Laurence Lozano Lara from Sta. Irene, Prosperidad, Agusan del Sur. I am a person who is always eager to learn and improve myself in different aspects of life. I value discipline and consistency. I enjoy spending my time learning new things, exploring my interests, and challenging myself to grow as a student and as a person. I also believe in staying focused on my goals and working step by step to achieve them.</p>
+      </div>
     </div>
+  </section>
 
-</section>
-
-    <section id="projects" class="projects">
-
-        <h2>My Projects</h2>
-
-         <div class="project-boxes">
-
-        <div class="box">
-    <h3>Project 1: Internet Subscription Tracker</h3>
-    <p>Tracks monthly internet subscription fee and calculates total cost.</p>
-
-    <button onclick="trackInternet()">Run Tracker</button>
-</div>
-        <div class="box">Project 2</div>
-        <div class="box">Project 3</div>
-        <div class="box">Project 4</div>
-
+  <section id="projects" class="projects">
+    <h2 class="section-title">My Projects</h2>
+    <div class="project-grid">
+      <div class="box">
+        <h3>Internet Subscription Tracker</h3>
+        <p>Tracks monthly internet subscription fee and calculates total cost.</p>
+        <button onclick="trackInternet()">Run Tracker</button>
+      </div>
+      <div class="box">Project 2<br><span>Coming Soon</span></div>
+      <div class="box">Project 3<br><span>Coming Soon</span></div>
+      <div class="box">Project 4<br><span>Coming Soon</span></div>
     </div>
+  </section>
 
-</section>
+  <section id="gallery" class="gallery-section">
+    <h2 class="section-title">My Gallery</h2>
 
-<section id="gallery" class="gallery-section">
-
-    <h2>My Gallery</h2>
-
-    <div class="gallery">
-
+    <div class="gallery-album" onclick="openAlbum()">
+      <h3>Photo Album</h3>
+      <div class="album-preview">
         <img src="images/A (1).jpg" alt="">
         <img src="images/B.jpg" alt="">
         <img src="images/C.jpg" alt="">
-        <img src="images/D.jpg" alt="">
-        <img src="images/chess 1.jpg" alt="">
-        <img src="images/chess 2.jpg" alt="">
-        <img src="images/chess 3.jpg" alt="">
+      </div>
+      <p>📷 Click to View Album</p>
     </div>
 
-</section>
+    <div id="galleryContent">
+      <button id="backButton" onclick="closeAlbum()">← Back to Album</button>
+      <img src="images/A (1).jpg" onclick="showImage(this.src)" alt="">
+      <img src="images/B.jpg" onclick="showImage(this.src)" alt="">
+      <img src="images/C.jpg" onclick="showImage(this.src)" alt="">
+      <img src="images/D.jpg" onclick="showImage(this.src)" alt="">
+      <img src="images/chess 1.jpg" onclick="showImage(this.src)" alt="">
+      <img src="images/chess 2.jpg" onclick="showImage(this.src)" alt="">
+      <img src="images/chess 3.jpg" onclick="showImage(this.src)" alt="">
+      <img src="images/x.jpg" onclick="showImage(this.src)" alt="">
+      <img src="images/y.jpg" onclick="showImage(this.src)" alt="">
+      <img src="images/z.jpg" onclick="showImage(this.src)" alt="">
+    </div>
+  </section>
 
+  <div id="imageViewer" onclick="closeImage()">
+    <img id="fullImage" alt="">
+  </div>
 
-    <footer id="contact"> 
+  <footer id="contact">
+    <h2>Contact Me</h2>
+    <p>📧 johnlaurencemax@gmail.com</p>
+    <p>💻 github.com/jrencemax-cyb</p>
+  </footer>
 
-        <h2>Contact Me</h2>
-
-        <p>Email: johnlaurencemax@gmail.com</p>
-        <p>GitHub:jrencemax-cyb</p>
-
-    </footer>
-
-    <script src="script.js"></script>
-
+  <script src="script.js"></script>
 </body>
 </html>
-
-
