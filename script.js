@@ -58,3 +58,4 @@ function toggleTheme() {
     overlay.classList.remove("active");
   }, 800);
 }
+ document.getElementById("themeToggle").addEventListener("click", toggleTheme);  
